@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useMemo } from 'react';
 import { translations, Language } from './translations';
 
 interface LanguageContextType {
@@ -30,11 +30,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const value = {
+  // Memoize context value to prevent unnecessary re-renders
+  const value = useMemo(() => ({
     language,
     setLanguage,
     t: translations[language],
-  };
+  }), [language, setLanguage]);
 
   return (
     <LanguageContext.Provider value={value}>

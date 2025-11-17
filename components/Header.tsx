@@ -12,24 +12,50 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 80);
+      // Throttle scroll events to improve performance
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+
+      timeoutId = setTimeout(() => {
+        setIsScrolled(window.scrollY > 80);
+      }, 10); // 10ms throttle
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Set initial state
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
   }, []);
 
   return (
-    <header
-      className={clsx(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled
-          ? 'bg-background-main shadow-sm'
-          : 'bg-background-main/80 backdrop-blur-sm'
-      )}
-    >
-      <div className="container-custom">
+    <>
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-accent focus:text-background-main focus:rounded"
+      >
+        Skip to main content
+      </a>
+
+      <header
+        className={clsx(
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          isScrolled
+            ? 'bg-background-main shadow-sm'
+            : 'bg-background-main/80 backdrop-blur-sm'
+        )}
+      >
+        <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="text-2xl font-serif font-semibold">
@@ -71,23 +97,27 @@ export function Header() {
             </a>
 
             {/* Language Switcher */}
-            <div className="flex items-center space-x-2 text-sm">
+            <div className="flex items-center space-x-2 text-sm" role="group" aria-label="Language selection">
               <button
                 onClick={() => setLanguage('en')}
                 className={clsx(
                   'transition-colors',
                   language === 'en' ? 'text-accent font-semibold' : 'hover:text-accent'
                 )}
+                aria-label="Switch to English"
+                aria-pressed={language === 'en'}
               >
                 EN
               </button>
-              <span className="text-border">|</span>
+              <span className="text-border" aria-hidden="true">|</span>
               <button
                 onClick={() => setLanguage('zh')}
                 className={clsx(
                   'transition-colors',
                   language === 'zh' ? 'text-accent font-semibold' : 'hover:text-accent'
                 )}
+                aria-label="切换到中文"
+                aria-pressed={language === 'zh'}
               >
                 中文
               </button>
@@ -185,7 +215,8 @@ export function Header() {
             </nav>
           </div>
         )}
-      </div>
-    </header>
+        </div>
+      </header>
+    </>
   );
 }
