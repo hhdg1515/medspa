@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useLanguage } from '@/lib/LanguageContext';
+import { siteConfig } from '@/lib/config';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -13,7 +14,7 @@ export function Footer() {
           {/* Left - Logo & Tagline */}
           <div>
             <h3 className="text-2xl font-serif font-semibold mb-4">
-              [Clinic Name] Aesthetics
+              {siteConfig.name} Aesthetics
             </h3>
             <p className="text-sm text-background-main/80">
               {t.footer.tagline}
@@ -24,14 +25,13 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">{t.footer.address}</h4>
             <p className="text-sm text-background-main/80 mb-4">
-              [具体地址]<br />
-              Los Angeles, CA 90XXX
+              {siteConfig.address}
             </p>
             <p className="text-sm text-background-main/80 mb-2">
-              <strong>{t.footer.phone}:</strong> (XXX) XXX-XXXX
+              <strong>{t.footer.phone}:</strong> {siteConfig.phone}
             </p>
             <p className="text-sm text-background-main/80">
-              <strong>{t.footer.email}:</strong> contact@clinic.com
+              <strong>{t.footer.email}:</strong> {siteConfig.email}
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export function Footer() {
               </a>
             </div>
             <p className="text-sm text-background-main/60">
-              © 2025 [Clinic Name] Aesthetics. All rights reserved.
+              © {new Date().getFullYear()} {siteConfig.name} Aesthetics. All rights reserved.
             </p>
           </div>
 

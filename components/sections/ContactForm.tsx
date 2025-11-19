@@ -23,26 +23,42 @@ export function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Implement actual form submission
-    // For now, simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-
-    setSubmitted(true);
-    setIsSubmitting(false);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        fullName: '',
-        email: '',
-        mobile: '',
-        preferredLanguage: 'en',
-        interestedIn: [],
-        message: '',
-        agreeToPolicy: false,
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit form');
+      }
+
+      setSubmitted(true);
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          fullName: '',
+          email: '',
+          mobile: '',
+          preferredLanguage: 'en',
+          interestedIn: [],
+          message: '',
+          agreeToPolicy: false,
+        });
+      }, 3000);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert(error instanceof Error ? error.message : 'An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleCheckboxChange = (value: string) => {

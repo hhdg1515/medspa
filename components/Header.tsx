@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from './Button';
 import { useLanguage } from '@/lib/LanguageContext';
+import { siteConfig } from '@/lib/config';
 import clsx from 'clsx';
 
 export function Header() {
@@ -59,7 +60,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="text-2xl font-serif font-semibold">
-            [Clinic Name] <span className="text-accent">{t.logo}</span>
+            {siteConfig.name} <span className="text-accent">{t.logo}</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -90,10 +91,10 @@ export function Header() {
           {/* Right Side - Phone & CTA & Language Switcher */}
           <div className="hidden lg:flex items-center space-x-6">
             <a
-              href="tel:XXXXXXXXXX"
+              href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, '')}`}
               className="text-sm hover:text-accent transition-colors"
             >
-              {t.phone}
+              {language === 'zh' ? `电话: ${siteConfig.phone}` : `Call: ${siteConfig.phone}`}
             </a>
 
             {/* Language Switcher */}
