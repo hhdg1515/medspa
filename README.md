@@ -1,11 +1,8 @@
 # Medical Aesthetics Clinic Website
 
-洛杉矶医美诊所官网 - 专注于瘦脸针、减肥针等注射类项目
+A high-end, compliant medical aesthetics website for a clinic specializing in face slimming, weight management, and anti-aging injectables.
 
-A high-end, compliant medical aesthetics website for a Los Angeles clinic specializing in face slimming, weight management, and anti-aging injectables.
-
-## Features / 功能特点
-
+## Features 
 - ✨ **Elementis-inspired Design** - Full-screen immersive experience with scroll storytelling
 - 🌐 **Bilingual Support** - Seamless Chinese/English language switching
 - 📱 **Fully Responsive** - Optimized for desktop, tablet, and mobile
@@ -14,8 +11,7 @@ A high-end, compliant medical aesthetics website for a Los Angeles clinic specia
 - ♿ **Accessible** - WCAG compliant components
 - 🚀 **Performance Optimized** - Fast loading with optimized images and code splitting
 
-## Tech Stack / 技术栈
-
+## Tech Stack 
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
@@ -23,15 +19,11 @@ A high-end, compliant medical aesthetics website for a Los Angeles clinic specia
 - **Animation**: Framer Motion (optional, included)
 - **State Management**: React Context API for i18n
 
-## Getting Started / 快速开始
-
-### Prerequisites / 前置要求
-
+### Prerequisites 
 - Node.js 20.x or higher
 - npm or yarn
 
-### Installation / 安装
-
+### Installation 
 1. Clone the repository:
 ```bash
 git clone <repository-url>
@@ -50,15 +42,14 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-### Build for Production / 生产构建
+### Build for Production 
 
 ```bash
 npm run build
 npm start
 ```
 
-## Project Structure / 项目结构
-
+## Project Structure 
 ```
 medspa-website/
 ├── app/                          # Next.js App Router
@@ -89,9 +80,8 @@ medspa-website/
 └── next.config.ts               # Next.js configuration
 ```
 
-## Customization / 自定义配置
-
-### Update Clinic Information / 更新诊所信息
+## Customization 
+### Update Clinic Information 
 
 1. Replace `[Clinic Name]` throughout the codebase with your actual clinic name
 2. Update contact information in:
@@ -99,7 +89,7 @@ medspa-website/
    - `components/Footer.tsx` (address, phone, email)
 3. Update metadata in `app/layout.tsx`
 
-### Update Colors / 更新颜色
+### Update Colors
 
 Edit `tailwind.config.ts`:
 
@@ -118,14 +108,13 @@ colors: {
 }
 ```
 
-### Add/Edit Content / 添加/编辑内容
+### Add/Edit Content 
 
 - **Bilingual Text**: Edit `lib/translations.ts`
 - **Homepage Sections**: Edit files in `components/sections/`
 - **Treatment Pages**: Create new pages in `app/treatments/[treatment-name]/page.tsx`
 
-### Add Images & Videos / 添加图片和视频
-
+### Add Images & Videos 
 1. Place images in `public/images/`
 2. Place videos in `public/videos/`
 3. Update components to reference your assets:
@@ -152,7 +141,7 @@ colors: {
 - Medical advertising laws
 - HIPAA privacy requirements
 
-## Pages / 页面
+## Pages 
 
 - ✅ **Home Page** (`/`) - Hero, Treatments, Why Us, How It Works, Contact Form
 - ✅ **Face Slimming** (`/treatments/face-slimming`) - Complete treatment details page
@@ -163,7 +152,7 @@ colors: {
 - 🚧 **Blog** - To be created
 - 🚧 **FAQ** - To be created
 
-## Next Steps / 下一步
+## Next Steps 
 
 1. **Add Real Content**:
    - Replace placeholder images with professional photos
@@ -190,19 +179,18 @@ colors: {
    - Add lazy loading for images
    - Implement ISR (Incremental Static Regeneration) if needed
 
-## Support / 支持
+## Support
 
 For questions or issues, please refer to:
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [TypeScript Documentation](https://www.typescriptlang.org/docs)
 
-## License / 许可
+## License
 
-This project is created for [Clinic Name]. All rights reserved.
+This project is created for . All rights reserved.
 
 ---
 
 Built with ❤️ for safe, professional medical aesthetics in Los Angeles.
 
-为洛杉矶的安全、专业医美而构建。
