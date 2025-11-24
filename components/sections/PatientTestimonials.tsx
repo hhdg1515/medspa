@@ -81,13 +81,15 @@ export function PatientTestimonials() {
     },
   ];
 
+  const totalTestimonials = testimonials.length;
+
   const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalTestimonials);
   };
 
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+      prevIndex === 0 ? totalTestimonials - 1 : prevIndex - 1
     );
   };
 
@@ -100,11 +102,11 @@ export function PatientTestimonials() {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      nextTestimonial();
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalTestimonials);
     }, 5000); // Auto-advance every 5 seconds
 
     return () => clearInterval(interval);
-  }, [currentIndex, isAutoPlaying]);
+  }, [isAutoPlaying, totalTestimonials]);
 
   const currentTestimonial = testimonials[currentIndex];
 
@@ -164,7 +166,7 @@ export function PatientTestimonials() {
 
                 {/* Quote */}
                 <blockquote className="text-xl md:text-2xl font-serif italic text-text-primary mb-8 leading-relaxed">
-                  "{language === 'zh' ? currentTestimonial.quoteChinese : currentTestimonial.quote}"
+                  &ldquo;{language === 'zh' ? currentTestimonial.quoteChinese : currentTestimonial.quote}&rdquo;
                 </blockquote>
 
                 {/* Author Info */}

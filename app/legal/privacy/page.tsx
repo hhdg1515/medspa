@@ -196,7 +196,7 @@ export default function PrivacyPolicyPage() {
                     <ul className="list-disc pl-6 text-text-secondary space-y-2">
                       <li><strong>Right to Access:</strong> Request copies of your medical records (some fees may apply)</li>
                       <li><strong>Right to Amend:</strong> Request corrections to your medical records if you believe they contain errors</li>
-                      <li><strong>Right to an Accounting:</strong> Receive a list of certain disclosures we've made of your PHI</li>
+                      <li><strong>Right to an Accounting:</strong> Receive a list of certain disclosures we&rsquo;ve made of your PHI</li>
                       <li><strong>Right to Request Restrictions:</strong> Ask us to limit how we use or share your information (we are not required to agree to all restrictions)</li>
                       <li><strong>Right to Confidential Communications:</strong> Request that we communicate with you in a specific way or at a specific location</li>
                       <li><strong>Right to a Paper Copy:</strong> Receive a paper copy of this Privacy Policy upon request</li>
@@ -207,7 +207,7 @@ export default function PrivacyPolicyPage() {
                       If you are a California resident, you have additional rights under the CCPA and CPRA:
                     </p>
                     <ul className="list-disc pl-6 text-text-secondary space-y-2">
-                      <li><strong>Right to Know:</strong> Request information about the personal data we've collected, used, disclosed, or sold about you</li>
+                      <li><strong>Right to Know:</strong> Request information about the personal data we&rsquo;ve collected, used, disclosed, or sold about you</li>
                       <li><strong>Right to Delete:</strong> Request deletion of your personal information (subject to certain exceptions)</li>
                       <li><strong>Right to Opt-Out:</strong> Opt out of the sale or sharing of your personal information (Note: We do not sell personal information)</li>
                       <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information</li>
@@ -284,7 +284,7 @@ export default function PrivacyPolicyPage() {
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-serif font-semibold mb-4">9. Children's Privacy</h2>
+                    <h2 className="text-2xl font-serif font-semibold mb-4">9. Children&rsquo;s Privacy</h2>
                     <p className="text-text-secondary leading-relaxed">
                       Our services are intended for adults aged 18 and older. We do not knowingly collect personal information from minors
                       without parental consent. If you believe we have inadvertently collected information from a minor, please contact us
@@ -307,7 +307,7 @@ export default function PrivacyPolicyPage() {
                     <p className="text-text-secondary leading-relaxed">
                       We reserve the right to modify this Privacy Policy at any time to reflect changes in our practices, technology,
                       legal requirements, or other factors. Material changes will be posted on our website and, when appropriate,
-                      communicated directly to you. The "Effective Date" at the top of this policy indicates when it was last updated.
+                      communicated directly to you. The &ldquo;Effective Date&rdquo; at the top of this policy indicates when it was last updated.
                       Changes apply to information collected after the effective date of the revision.
                     </p>
                   </div>
@@ -338,7 +338,7 @@ export default function PrivacyPolicyPage() {
                     <ul className="list-disc pl-6 text-text-secondary space-y-2 mt-3">
                       <li>Our Privacy Officer using the contact information above</li>
                       <li>The U.S. Department of Health and Human Services Office for Civil Rights</li>
-                      <li>The California Attorney General's Office</li>
+                      <li>The California Attorney General&rsquo;s Office</li>
                     </ul>
                     <p className="text-text-secondary leading-relaxed mt-3">
                       You will not be penalized or retaliated against for filing a complaint.
@@ -615,7 +615,7 @@ export default function PrivacyPolicyPage() {
                     <h2 className="text-2xl font-serif font-semibold mb-4">11. 本隐私政策的更改</h2>
                     <p className="text-text-secondary leading-relaxed">
                       我们保留随时修改本隐私政策的权利，以反映我们实践、技术、法律要求或其他因素的变化。
-                      重大变更将发布在我们的网站上，并在适当时直接与您沟通。本政策顶部的"生效日期"表示上次更新的时间。
+                      重大变更将发布在我们的网站上，并在适当时直接与您沟通。本政策顶部的&ldquo;生效日期&rdquo;表示上次更新的时间。
                       更改适用于修订生效日期之后收集的信息。
                     </p>
                   </div>

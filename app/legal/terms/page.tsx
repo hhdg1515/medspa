@@ -37,7 +37,7 @@ export default function TermsOfServicePage() {
                     <h2 className="text-2xl font-serif font-semibold mb-4">1. Acceptance of Terms</h2>
                     <p className="text-text-secondary leading-relaxed">
                       By scheduling an appointment, receiving treatments, or utilizing any services provided by our medical aesthetics practice
-                      (referred to as "we," "us," or "our clinic"), you acknowledge that you have reviewed, understood, and agree to be bound
+                      (referred to as &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our clinic&rdquo;), you acknowledge that you have reviewed, understood, and agree to be bound
                       by these Terms of Service. If you do not agree with any portion of these terms, please refrain from using our services.
                     </p>
                   </div>
@@ -243,7 +243,7 @@ export default function TermsOfServicePage() {
                   <div>
                     <h2 className="text-2xl font-serif font-semibold mb-4">1. 接受条款</h2>
                     <p className="text-text-secondary leading-relaxed">
-                      通过预约、接受治疗或使用我们医美诊所提供的任何服务（以下简称"我们"、"本诊所"），即表示您已阅读、理解并同意遵守本服务条款。
+                      通过预约、接受治疗或使用我们医美诊所提供的任何服务（以下简称&ldquo;我们&rdquo;、&ldquo;本诊所&rdquo;），即表示您已阅读、理解并同意遵守本服务条款。
                       如果您不同意本条款的任何部分，请勿使用我们的服务。
                     </p>
                   </div>

@@ -34,6 +34,17 @@ export interface WellnessTreatmentData {
     icon: string;
   }>;
 
+  process: {
+    title: string;
+    titleChinese: string;
+    steps: Array<{
+      title: string;
+      titleChinese: string;
+      description: string;
+      descriptionChinese: string;
+    }>;
+  };
+
   faq: Array<{
     question: string;
     questionChinese: string;
@@ -49,7 +60,7 @@ export const wellnessTreatments: WellnessTreatmentData[] = [
     nameChinese: '静脉注射疗法',
     tagline: 'Optimize Your Health from Within',
     taglineChinese: '由内而外优化您的健康',
-    heroImage: "url('/images/treatments/iv-therapy-hero.jpg')",
+    heroImage: '/images/treatment-room.jpg',
     duration: '30-60 minutes',
     durationChinese: '30-60分钟',
     downtime: 'None',
@@ -97,23 +108,48 @@ export const wellnessTreatments: WellnessTreatmentData[] = [
         titleChinese: '即时吸收',
         description: '100% bioavailability ensures maximum nutrient uptake compared to oral supplements.',
         descriptionChinese: '100%生物利用度确保营养物质最大程度吸收，优于口服补充剂。',
-        icon: '⚡',
+        icon: 'bolt',
       },
       {
         title: 'Customized Formulas',
         titleChinese: '定制配方',
         description: 'Tailored IV drips designed specifically for your health goals and deficiencies.',
         descriptionChinese: '专门为您的健康目标和缺乏症设计的定制IV滴注配方。',
-        icon: '🎯',
+        icon: 'target',
       },
       {
         title: 'Rapid Results',
         titleChinese: '快速见效',
         description: 'Feel the benefits within hours as nutrients flood your system efficiently.',
         descriptionChinese: '随着营养物质高效灌注您的系统，在数小时内感受到效果。',
-        icon: '⏱️',
+        icon: 'clock',
       },
     ],
+
+    process: {
+      title: 'Treatment Journey',
+      titleChinese: '疗程流程',
+      steps: [
+        {
+          title: 'Personalized Assessment',
+          titleChinese: '个性化评估',
+          description: 'A clinician reviews your hydration status, goals, and recent labs to determine the nutrients you need most.',
+          descriptionChinese: '临床医生会评估您的水合状况、目标和近期化验结果，以确定您最需要的营养成分。',
+        },
+        {
+          title: 'Custom IV Preparation',
+          titleChinese: '定制静脉配制',
+          description: 'Pharmaceutical-grade vitamins, minerals, and antioxidants are blended on-site for your infusion.',
+          descriptionChinese: '药品级维生素、矿物质和抗氧化剂在现场混合，专属为您滴注。',
+        },
+        {
+          title: 'Rest & Replenish',
+          titleChinese: '放松补充',
+          description: 'Relax in a private suite during the 30-60 minute infusion while our team monitors your comfort.',
+          descriptionChinese: '在30-60分钟的滴注过程中，于私密空间放松，团队全程监测您的舒适度。',
+        },
+      ],
+    },
 
     faq: [
       {
@@ -146,7 +182,7 @@ export const wellnessTreatments: WellnessTreatmentData[] = [
     nameChinese: '荷尔蒙优化',
     tagline: 'Balance Your Body Naturally',
     taglineChinese: '自然平衡您的身体',
-    heroImage: "url('/images/treatments/hormone-hero.jpg')",
+    heroImage: '/images/hero-model.jpg',
     duration: '45-60 minutes (consultation)',
     durationChinese: '45-60分钟（咨询）',
     downtime: 'None',
@@ -194,23 +230,48 @@ export const wellnessTreatments: WellnessTreatmentData[] = [
         titleChinese: '生物同质性激素',
         description: "Molecularly identical to your body's natural hormones for optimal compatibility.",
         descriptionChinese: '分子结构与您身体的天然激素相同，实现最佳兼容性。',
-        icon: '🧬',
+        icon: 'dna',
       },
       {
         title: 'Comprehensive Testing',
         titleChinese: '全面检测',
         description: 'Detailed lab work identifies specific imbalances and deficiencies.',
         descriptionChinese: '详细的实验室检查识别特定的失衡和缺乏症。',
-        icon: '🔬',
+        icon: 'microscope',
       },
       {
         title: 'Ongoing Monitoring',
         titleChinese: '持续监测',
         description: 'Regular follow-ups and adjustments ensure optimal hormone levels are maintained.',
         descriptionChinese: '定期随访和调整确保维持最佳激素水平。',
-        icon: '📊',
+        icon: 'chart',
       },
     ],
+
+    process: {
+      title: 'What to Expect',
+      titleChinese: '治疗步骤',
+      steps: [
+        {
+          title: 'Advanced Diagnostics',
+          titleChinese: '高级诊断',
+          description: 'We order comprehensive bloodwork, DUTCH testing, and symptom mapping to understand your baseline.',
+          descriptionChinese: '我们通过全面血检、DUTCH激素测试和症状评估来了解您的基础状态。',
+        },
+        {
+          title: 'Personalized Protocol',
+          titleChinese: '个性化方案',
+          description: 'Your provider prescribes bioidentical hormones plus targeted nutraceuticals tailored to your biology.',
+          descriptionChinese: '医生为您制定生物同质性激素及针对性营养补充的专属组合。',
+        },
+        {
+          title: 'Continuous Optimization',
+          titleChinese: '持续优化',
+          description: 'Follow-up visits every 8-12 weeks fine-tune dosing so you feel balanced and energized long term.',
+          descriptionChinese: '每8-12周复诊一次，微调剂量，帮助您长期保持平衡与活力。',
+        },
+      ],
+    },
 
     faq: [
       {
@@ -243,7 +304,7 @@ export const wellnessTreatments: WellnessTreatmentData[] = [
     nameChinese: '健康咨询',
     tagline: 'Your Personalized Path to Optimal Health',
     taglineChinese: '您通往最佳健康的个性化之路',
-    heroImage: "url('/images/treatments/wellness-consultation-hero.jpg')",
+    heroImage: '/images/why-interior.jpg',
     duration: '60-90 minutes',
     durationChinese: '60-90分钟',
     downtime: 'None',
@@ -291,23 +352,48 @@ export const wellnessTreatments: WellnessTreatmentData[] = [
         titleChinese: '全人方法',
         description: 'Addresses root causes rather than just treating symptoms for lasting results.',
         descriptionChinese: '解决根本原因而不仅仅是治疗症状，实现持久效果。',
-        icon: '🌿',
+        icon: 'leaf',
       },
       {
         title: 'Evidence-Based',
         titleChinese: '基于证据',
         description: 'Recommendations backed by the latest research in functional and integrative medicine.',
         descriptionChinese: '基于功能医学和整合医学最新研究的建议。',
-        icon: '📚',
+        icon: 'book',
       },
       {
         title: 'Personalized Care',
         titleChinese: '个性化护理',
         description: 'Every plan is uniquely tailored to your specific needs, goals, and biochemistry.',
         descriptionChinese: '每个计划都根据您的具体需求、目标和生化特征进行独特定制。',
-        icon: '👤',
+        icon: 'user',
       },
     ],
+
+    process: {
+      title: 'Consultation Flow',
+      titleChinese: '咨询流程',
+      steps: [
+        {
+          title: 'Discovery Session',
+          titleChinese: '初诊评估',
+          description: 'We review your medical history, lifestyle, and goals to understand where support is needed.',
+          descriptionChinese: '我们详细了解您的病史、生活方式和目标，确定需要支持的方向。',
+        },
+        {
+          title: 'Data-Driven Insights',
+          titleChinese: '数据分析',
+          description: 'Comprehensive labs and body composition testing reveal nutrient gaps and metabolic patterns.',
+          descriptionChinese: '通过全面实验室和身体成分检测，发现营养缺口与代谢模式。',
+        },
+        {
+          title: 'Actionable Plan',
+          titleChinese: '行动方案',
+          description: 'Receive a detailed roadmap covering nutrition, supplementation, movement, and follow-up milestones.',
+          descriptionChinese: '获得涵盖营养、补充剂、运动及随访节点的详细路线图。',
+        },
+      ],
+    },
 
     faq: [
       {
